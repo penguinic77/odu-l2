@@ -1,0 +1,77 @@
+{
+    "managedelement": {
+        "id": "2000-12-31T16:00:00.000Z",
+        "attributes": {
+            "prioritylabel": 1
+        },
+        "gnbdufunction": {
+            "id": "2000-12-31T16:00:00.000Z",
+            "attributes": {
+                "gnbid": 1,
+                "gnbidlength": 23,
+                "gnbduid": 3,
+                "prioritylabel": 1,
+                "resourcetype": "PRB_DL",
+                "rrmpolicymemberlist": [{
+                    "mcc": 311,
+                    "mnc": 48,
+                    "sd": 1,
+                    "sst": 1
+                }, {
+                    "mcc": 311,
+                    "mnc": 48,
+                    "sd": 2,
+                    "sst": 1
+                }]
+            },
+            "nrcelldu": {
+                "id": "2000-12-31T16:00:00.000Z",
+                "attributes": {
+                    "prioritylabel": 1,
+                    "resourcetype": "PRB_DL",
+                    "rrmpolicymemberlist": [{
+                        "mcc": 311,
+                        "mnc": 48,
+                        "sd": 1,
+                        "sst": 1
+                    }, {
+                        "mcc": 311,
+                        "mnc": 48,
+                        "sd": 2,
+                        "sst": 1
+                    }],
+                    "celllocalid": 1,
+                    "plmninfolist": [{
+                        "mcc": 311,
+                        "mnc": 48,
+                        "sd": 1,
+                        "sst": 1
+                    }, {
+                        "mcc": 311,
+                        "mnc": 48,
+                        "sd": 2,
+                        "sst": 1
+                    }],
+                    "nrpci": 1,
+                    "ssbfrequency": 1,
+                    "ssbperiodicity": 20,
+                    "ssbsubcarrierspacing": 15,
+                    "ssboffset": 0,
+                    "ssbduration": 1,
+                    "nrsectorcarrierref": "CN=John Smith,OU=Sales,O=ACME Limited,L=Moab,ST=Utah,C=US",
+                    "administrativestate": "UNLOCKED",
+                    "nrtac": 1,
+                    "arfcndl": 428000,
+                    "arfcnul": 390000,
+                    "arfcnsul": 200,
+                    "bschannelbwdl": 20,
+                    "bschannelbwul": 20,
+                    "bschannelbwsul": 14
+                },
+                "@xmlns": "urn:3gpp:sa5:_3gpp-nr-nrm-nrcelldu"
+            },
+            "@xmlns": "urn:3gpp:sa5:_3gpp-nr-nrm-gnbdufunction"
+        },
+        "@xmlns": "urn:3gpp:sa5:_3gpp-common-managed-element"
+    }
+}

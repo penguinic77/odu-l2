@@ -1,0 +1,18 @@
+{
+  "rrmpolicyratio": {
+      "id": "2000-12-31T16:00:00.000Z",
+      "attributes": {
+          "resourcetype": "PRB_UL",
+          "rrmpolicymemberlist": {
+              "mcc": 311,
+              "mnc": 48,
+              "sd": 2,
+              "sst": 1
+          },
+          "rrmpolicymaxratio": 90,
+          "rrmpolicyminratio": 40,
+          "rrmpolicydedicatedratio": 40
+      },
+      "@xmlns": "urn:3gpp:sa5:_3gpp-nr-nrm-rrmpolicy"
+  }
+}

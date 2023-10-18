@@ -111,7 +111,7 @@ install_netconf_lib() {
       cd cJSON && \
       mkdir build && cd build && \
       cmake .. -DENABLE_CJSON_UTILS=On -DENABLE_CJSON_TEST=Off && \
-      make -j4 && \
+      make -j`nproc` && \
       $SUDO make install && \
       $SUDO ldconfig
    check_ret "LIBJSON" "$?"
@@ -122,7 +122,7 @@ install_netconf_lib() {
       cd curl && \
       mkdir build && cd build && \
       cmake -DBUILD_TESTING=OFF .. && \
-      make -j4 && \
+      make -j`nproc` && \
       $SUDO make install && \
       $SUDO ldconfig
    check_ret "LIBCURL" "$?"
@@ -133,7 +133,7 @@ install_netconf_lib() {
       cd libyang && mkdir build && cd build && \
       cmake -DGEN_LANGUAGE_BINDINGS=ON -DGEN_PYTHON_BINDINGS=OFF \
             -DCMAKE_BUILD_TYPE:String="Debug" -DENABLE_BUILD_TESTS=OFF .. && \
-      make -j2 && \
+      make -j`nproc` && \
       $SUDO make install && \
       $SUDO ldconfig
 
@@ -147,7 +147,7 @@ install_netconf_lib() {
       cmake -DGEN_LANGUAGE_BINDINGS=ON -DGEN_PYTHON_BINDINGS=OFF \
             -DCMAKE_BUILD_TYPE:String="Debug" -DENABLE_TESTS=OFF \
 	    -DREPOSITORY_LOC:PATH=/etc/sysrepo .. && \
-      make -j2 && \
+      make -j`nproc` && \
       $SUDO make install && $SUDO make sr_clean && \
       $SUDO ldconfig
 
@@ -158,7 +158,7 @@ install_netconf_lib() {
       git clone -b v1.1.36 --depth 1 https://github.com/CESNET/libnetconf2.git && \
       cd libnetconf2 && mkdir build && cd build && \
       cmake -DCMAKE_BUILD_TYPE:String="Debug" -DENABLE_BUILD_TESTS=OFF .. && \
-      make -j2 && \
+      make -j`nproc` && \
       $SUDO make install && \
       $SUDO ldconfig
 
@@ -170,7 +170,7 @@ install_netconf_lib() {
       cd Netopeer2 && mkdir build && cd build && \
       cmake -DCMAKE_BUILD_TYPE:String="Debug" -DNP2SRV_DATA_CHANGE_TIMEOUT=30000 \
             -DNP2SRV_DATA_CHANGE_WAIT=OFF .. && \
-      make -j2 && \
+      make -j`nproc` && \
       $SUDO make install -d
    check_ret "NETOPEER2" "$?"
 
